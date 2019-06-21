@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Grid</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Pridi:200,400,500,600,700" rel="stylesheet">
+  <!-- main css -->
+  
+</head>
+<style>
+	
+	body
+  background: #eee
+  min-height: 3000px
+  padding: 0
+  margin: 0
+  font-family: 'Open Sans', sans-serif
+
+.container
+  width: 80%
+  margin: 0 auto
+  clear: both
+  
+a
+  display: inline-block
+  color: #333
+  text-decoration: none
+  
+  
+nav
+  background: #fff
+  height: 80px
+  line-height: 80px
+  box-shadow: 1px 1px 1px rgba(0, 0,0, 0.2)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 9998
+  transition: all 0.5s
+  &.scrollUp
+    transform: translateY(-80px)
+  
+  ul.navbar-menu
+    margin: 0
+    padding: 0
+    display: inline-block
+    float: right
+    
+    li
+      display: inline-block
+      margin: 0 10px
+      a
+        color: #666
+        font-size: 14px
+        
+  a#brand
+    text-transform: uppercase
+    foat: left
+    font-weight: 800
+    font-size: 20px
+    
+  button
+    background: none
+    width: 30px
+    height: 40px
+    margin-top: 20px
+    border: none
+    float: right
+    display: inline-block
+    cursor: pointer
+    display: none
+
+    span
+      width: 30px
+      height: 40px
+      height: 2px
+      background: #333
+      display: block
+      margin: 5px 0
+      
+    
+
+@media (max-width: 768px)
+  nav ul.navbar-menu
+    display: none
+  nav button
+    display: block
+    
+    
+    
+    
+	
+	</style>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="#" id="brand">Brand</a>
+    <button>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <ul class="navbar-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">page a</a></li>
+      <li><a href="#">page b</a></li>
+      <li><a href="#">page c</a></li>
+      <li><a href="#">page d</a></li>
+    </ul>
+    
+  </div>
+</nav>
+
+<script>
+	
+	$(document).ready(function () {
+  
+  'use strict';
+  
+   var c, currentScrollTop = 0,
+       navbar = $('nav');
+
+   $(window).scroll(function () {
+      var a = $(window).scrollTop();
+      var b = navbar.height();
+     
+      currentScrollTop = a;
+     
+      if (c < currentScrollTop && a > b + b) {
+        navbar.addClass("scrollUp");
+      } else if (c > currentScrollTop && !(a <= b)) {
+        navbar.removeClass("scrollUp");
+      }
+      c = currentScrollTop;
+  });
+  
+});
+	
+	</script>
+</body>
+
+</html>

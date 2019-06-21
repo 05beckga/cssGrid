@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Grid</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans:400,700" rel="stylesheet">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/main.css">
+  
+</head>
+
+<body >
+
+
+<header class="header">
+
+   
+   <div id="navbar">
+   	
+      	<div id="logo">
+      	<a href="index.html">
+      		<h1 style="color:#fff;">Bryant Hill</h1>
+      	</a>	
+      	</div>
+     <div id="links">
+      		    <a href="index.html">About</a>
+				<a href="5eastend.html" class="nav__link">Availabilities</a>  
+     			<a href="contact.html">Contact</a>		
+      	</div>
+
+     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+        <li><a href="index.html">About</a></li>
+        <li><a href="5eastend.html" class="nav__link">Availabilities </a></li>
+        <li><a href="contact.html">Contact</a></li>		
+    </ul>
+ 	
+  </div>
+  
+   </div>
+
+</header>
+<main id="main" class="oth-page">
+
+  <section class="cliff3-top avail-hero hero">
+		<div class="hero__wrapper" style="margin-top: 106px;">
+		  <h1 class="heading-primary">Contact Us</h1>
+		</div>
+    </section>
+  
+  <section class="container section-house container-big">
+      <div class=" section-nav--contact">
+      <h3 class="form-nav__heading">Leasing</h3>
+      <p class="section-nav__text">For all leasing inquiries, please call Jaina Fletcher at +61 3 0000 0000 or use the form at right.</p>
+     <div class="social-links">
+					  <i class="fab fa-facebook-f"></i>
+					  <i class="fab fa-twitter"></i>
+					  <i class="fab fa-instagram"></i>
+					  <i class="fab fa-youtube"></i>
+			     </div> 
+    </div>
+    
+    <div class="contact-sect">
+    
+    <div class="section-group">
+      <div class="form">
+       <form method="post" action="#">
+         <div class="form__group">
+           <label for="select-dropdown" class="form__heading">Interest *</label>
+           <select name="houses" id="select-dropdown" class="form__select" required="">
+             <option value="">Please select</option>
+             <option value="5 East End">5 East End</option>
+             <option value="18 Sackett Way">18 Sackett Way</option>
+             <option value="23 Sackett Way">23 Sackett Way</option>
+             <option value="6 Cliffside Drive">6 Cliffside Drive</option>
+             <option value="2 Cliffside Drive">2 Cliffside Drive</option>
+             <option value="7 Cliffside Drive">7 Cliffside Drive</option>
+             <option value="Other">Other</option>
+           </select>
+         </div>
+         <div class="form__group">
+           <label for="name" class="form__heading">Name *</label>
+           <div class="form__flex">
+             <div class="form__flex--names">
+               <input id="name" type="text" class="form__input" required="">
+             </div>
+           </div>
+         </div>
+         <div class="form__group">
+           <label for="email" class="form__heading">Email Address *</label>
+           <input id="email" type="email" class="form__input" required="">
+         </div>
+         <div class="form__group">
+           <label for="phone" class="form__heading">Phone Number *</label>
+           <input id="phone" type="text" class="form__input" required="">
+         </div>
+         <div class="form__group">
+           <label for="message" class="form__heading">Message</label>
+           <textarea id="message" class="form__input" rows="6"></textarea>
+         </div>
+         <div class="form__group">
+           <button type="submit" class="btn-submit">Submit</button>
+         </div>
+       </form>
+     </div>
+    </div>
+    
+    </div>
+  </section>
+  
+  
+ 	</main>
+<footer class="footer">
+  <div class="footer__upper">
+    <h2 class=" heading-secondary--footer">Your new home awaits</h2>
+    <div class="cta--footer">
+    <a href="contact.html" class=" act-start">Start the process →</a>
+    </div>
+  </div>
+  <div class="footer__lower">
+    <div class="footer__adress">Bryant Hill, 52 Vaucluse Rd, Vaucluse, NSW, 2030, Australia</div>
+  </div>
+</footer>
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-80px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+</body>
+
+</html>
